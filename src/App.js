@@ -6,33 +6,32 @@ import LandingPageComponent from './components/LandingPageComponent';
 import SignInComponent from './components/SignInComponent';
 import SignUpComponent from './components/SignUpComponent';
 import NavBarComponent from './components/NavBarComponent';
+import ProfileComponent from './components/ProfileComponent';
 // import './App.css';
+import history from "./utils/history";
+import PrivateRoute from "./components/PrivateRouteComponent";
 
 const App = () => {
-  const { loading } = useAuth0;
+  const { loading } = useAuth0();
 
   if (loading) {
     return <div>Loading...</div>;
   }
-  
+
   return (
-    <Router>
+    <Router history={history}>
       <div>
         <nav>
           <NavBarComponent />
         </nav>
 
         <Switch>
-          <Route path="/SignIn">
-            <SignInComponent />
-          </Route>
-          <Route path="/SignUp">
-            <SignUpComponent />
-          </Route>
-          <Route path="/">
-            <LandingPageComponent />
-          </Route>
+          <Route path="/signIn" component={SignInComponent} />
+          <Route path="/signUp" component={SignUpComponent} />
+          <PrivateRoute path="/profile" component={ProfileComponent} />
+          <Route path="/" component={LandingPageComponent} />
         </Switch>
+
       </div>
     </Router>
   );

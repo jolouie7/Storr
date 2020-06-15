@@ -6,8 +6,8 @@ import Button from "react-bootstrap/Button";
 import { Link, useHistory } from "react-router-dom";
 
 const NavBarComponent = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0;
-  const history = useHistory();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  // const history = useHistory();
 
   return (
     <div>
@@ -23,21 +23,29 @@ const NavBarComponent = () => {
               <div>
                 {!isAuthenticated && (
                   <Button variant="dark" onClick={() => loginWithRedirect({})}>
-                    Log in
+                    Sign in
                   </Button>
+                )}
+
+                {/* NEW - add a link to the home and profile pages */}
+                {isAuthenticated && (
+                  <span>
+                    <Link to="/">
+                      <Button variant="dark">Home</Button>
+                    </Link>
+                    &nbsp;
+                    <Link to="/profile">
+                      <Button variant="dark">Profile</Button>
+                    </Link>
+                  </span>
                 )}
 
                 {isAuthenticated && (
                   <Button variant="dark" onClick={() => logout()}>
-                    Log out
+                    Sign out
                   </Button>
                 )}
               </div>
-            </Nav.Link>
-            <Nav.Link>
-              <Button variant="primary" onClick={() => history.push("/SignUp")}>
-                Sign Up
-              </Button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
