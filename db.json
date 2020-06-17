@@ -1,5 +1,25 @@
 {
-  "users": [{ "name": "joe", "job_title": "manager", "email": "joe@gmail.com", "profile": "insert profile pic", "password": "password"}],
-  "categorys": [{ "name": "electronics", "picture": "./public/logo192.png"}],
-  "items": [{ "name": "laptop", "category_id": 1, "category": "electronics", "description": "very good product", "picture": "insert something here", "item_quantity": 1 }]
+  "users": [
+    {
+      "name": "joe",
+      "job_title": "manager",
+      "email": "joe@gmail.com",
+      "profile": "insert profile pic",
+      "password": "password"
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "electronics", "picture": "logo192.png" },
+    { "id": 2, "name": "video games", "picture": "logo192.png" }
+  ],
+  "items": [
+    {
+      "name": "laptop",
+      "category_id": 1,
+      "category": "electronics",
+      "description": "very good product",
+      "picture": "insert something here",
+      "item_quantity": 1
+    }
+  ]
 }
