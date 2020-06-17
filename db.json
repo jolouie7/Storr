@@ -10,7 +10,9 @@
   ],
   "categories": [
     { "id": 1, "name": "electronics", "picture": "logo192.png" },
-    { "id": 2, "name": "video games", "picture": "logo192.png" }
+    { "id": 2, "name": "video games", "picture": "logo192.png" },
+    { "id": 3, "name": "computer parts", "picture": "logo192.png" },
+    { "id": 4, "name": "fruits", "picture": "logo192.png" }
   ],
   "items": [
     {
