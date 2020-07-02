@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CategoryComponent from "../components/CategoryComponent";
-import { Container, Row, Col, CardImg } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 const CategoryContainer = (props) => {
   const [state, setstate] = useState([]);
@@ -28,7 +28,6 @@ const CategoryContainer = (props) => {
             />
           </Col>
         ))}
-        {/* <div>{JSON.stringify(state)}</div> */}
       </Row>
     </div>
   );
