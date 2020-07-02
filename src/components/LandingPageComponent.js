@@ -3,7 +3,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 
-function LandingPageComponent() {
+function LandingPageComponent({history}) {
   return (
     <div>
       <Container>
@@ -14,7 +14,7 @@ function LandingPageComponent() {
             calling extra attention to featured content or information.
           </p>
           <p>
-            <Button variant="primary">Learn more</Button>
+            <Button onClick={() => history.push("/categories")} variant="primary">Categories</Button>
           </p>
         </Jumbotron>
       </Container>

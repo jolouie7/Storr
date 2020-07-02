@@ -10,7 +10,8 @@ import ProfileComponent from './components/ProfileComponent';
 // import './App.css';
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRouteComponent";
-import CategoryContainer from './containers/CategoryContainer';
+import CategoryContainer from './containers/CategorysContainer';
+import ItemsContainer from './containers/ItemsContainer';
 
 const App = () => {
   const { loading } = useAuth0();
@@ -29,6 +30,7 @@ const App = () => {
         <Switch>
           <Route path="/signIn" component={SignInComponent} />
           <Route path="/signUp" component={SignUpComponent} />
+          <Route path="/categories/:id" component={ItemsContainer} />
           <Route path="/categories" component={CategoryContainer} />
           <PrivateRoute path="/profile" component={ProfileComponent} />
           <Route path="/" component={LandingPageComponent} />

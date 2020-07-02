@@ -10,7 +10,7 @@
 
 [x] implement Auth0
 [] add integration tests
-[] setup redux (either redux-toolkit or redux thunk)
+[] setup redux-toolkit
 [] buttons on the category page to add, delete, edit a category if your the manager
 
 <br />
@@ -23,7 +23,7 @@
 [] are there tests to add in the backend?
 ##### Manager features
 [] managers can make an employee a manager
-[] only managers can perform CRUD operations on categories
+[] only managers can add someone as an employee and make that employee as a admin
 
 <br />
 

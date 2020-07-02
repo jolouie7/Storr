@@ -22,6 +22,22 @@
       "description": "very good product",
       "picture": "insert something here",
       "item_quantity": 1
+    },
+    {
+      "name": "iphone",
+      "category_id": 1,
+      "category": "electronics",
+      "description": "very good product!",
+      "picture": "insert something here!",
+      "item_quantity": 1
+    },
+    {
+      "name": "banana",
+      "category_id": 14,
+      "category": "fruits",
+      "description": "delicious",
+      "picture": "insert something here!!",
+      "item_quantity": 1
     }
   ]
 }

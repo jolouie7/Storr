@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CategoryComponent from "../components/CategoryComponent";
 import { Row, Col } from "react-bootstrap";
 
-const CategoryContainer = (props) => {
+const CategoryContainer = ({history, match}) => {
   const [state, setstate] = useState([]);
 
   useEffect(() => {
@@ -23,8 +23,11 @@ const CategoryContainer = (props) => {
           <Col>
             <CategoryComponent
               key={id}
+              id={id}
               name={category.name}
               picture={category.picture}
+              history={history}
+              match={match}
             />
           </Col>
         ))}
