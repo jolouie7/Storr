@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react'
-import ItemComponent from '../components/ItemComponent'
+import React, { useState, useEffect } from "react";
+import ItemComponent from "../components/ItemComponent";
+import { Row, Col } from "react-bootstrap";
 
-const ItemsContainer = ({match}) => {
+const ItemsContainer = ({ match }) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -13,16 +14,22 @@ const ItemsContainer = ({match}) => {
 
     fetchMyAPI();
   }, []);
-  
-  const filteredItems = items.filter(item => item.category === match.params.id)
+
+  const filteredItems = items.filter(
+    (item) => item.category === match.params.id
+  );
 
   return (
-    <div>
-      {filteredItems.map((item, id) => (
-        <ItemComponent item={item} key={id} />
-      ))}
+    <div className="container">
+      <Row xs={1} md={3}>
+        {filteredItems.map((item, id) => (
+          <Col>
+            <ItemComponent item={item} key={id} />
+          </Col>
+        ))}
+      </Row>
     </div>
   );
-}
+};
 
-export default ItemsContainer
+export default ItemsContainer;
