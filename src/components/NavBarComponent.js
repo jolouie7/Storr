@@ -19,15 +19,30 @@ const NavBarComponent = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link>
-              {/* <Button variant="dark" onClick={() => history.push("/SignIn")}>Sign In</Button> */}
               <div>
+                {/* Is signed in, allow the user to create a new item */}
+                {isAuthenticated && (
+                  <Link to="/items/create">
+                    <Button variant="dark">Create new Item</Button>
+                  </Link>
+                )}
+
+                <Link to="/items">
+                  <Button variant="dark">Items</Button>
+                </Link>
+                <Link to="/categories">
+                  <Button variant="dark">Categories</Button>
+                </Link>
+
+                {/* Is not signed in display a sign in button */}
                 {!isAuthenticated && (
                   <Button variant="dark" onClick={() => loginWithRedirect({})}>
-                    Sign in
+                    Sign In
                   </Button>
                 )}
 
-                {/* NEW - add a link to the home and profile pages */}
+                {/* Is signed in display Profile button */}
+                {/* DONT KNOW IF I NEED A HOME BUTTON */}
                 {isAuthenticated && (
                   <span>
                     <Link to="/">
@@ -40,9 +55,10 @@ const NavBarComponent = () => {
                   </span>
                 )}
 
+                {/* Is signed in display sign out button */}
                 {isAuthenticated && (
                   <Button variant="dark" onClick={() => logout()}>
-                    Sign out
+                    Sign Out
                   </Button>
                 )}
               </div>

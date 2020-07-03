@@ -4,11 +4,11 @@
 [] admin panel
 [] indiviual item page
 [x] categories page
+[] items page
 [] add more buttons to Navbar
-- [] add a create item button
+- [] add a create item button (has to be signed in)
 - [] add a button to view all categories
 - [] add a button to view all items
-- [] add a button to go to add items
 
 [x] implement Auth0
 [] add integration tests
