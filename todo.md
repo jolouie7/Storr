@@ -13,7 +13,6 @@
 [x] implement Auth0
 [] add integration tests
 [] setup redux-toolkit
-[] buttons on the category page to add, delete, edit a category if your the manager
 
 <br />
 

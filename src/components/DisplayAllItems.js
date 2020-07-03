@@ -19,8 +19,8 @@ const DisplayAllItems = () => {
     <div className="container">
       <Row xs={1} md={3}>
         {items.map((item, id) => (
-          <Col>
-            <ItemComponent item={item} key={id} />
+          <Col key={id}>
+            <ItemComponent item={item} key={id}/>
           </Col>
         ))}
       </Row>

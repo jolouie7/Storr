@@ -16,6 +16,7 @@
   ],
   "items": [
     {
+      "id": 0,
       "name": "laptop",
       "category_id": 1,
       "category": "electronics",
@@ -24,6 +25,7 @@
       "item_quantity": 1
     },
     {
+      "id": 1,
       "name": "iphone",
       "category_id": 1,
       "category": "electronics",
@@ -32,6 +34,7 @@
       "item_quantity": 1
     },
     {
+      "id": 2,
       "name": "banana",
       "category_id": 14,
       "category": "fruits",

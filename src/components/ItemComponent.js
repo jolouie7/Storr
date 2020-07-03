@@ -1,8 +1,9 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 const ItemComponent = (props) => {
   const { name, category, description, picture, item_quantity } = props.item;
+  console.log(props.item.id)
 
   return (
     <div>
@@ -14,6 +15,12 @@ const ItemComponent = (props) => {
           <Card.Text>{description}</Card.Text>
           <Card.Text>{item_quantity}</Card.Text>
           <Card.Text>{picture}</Card.Text>
+          <Card.Link href="#">
+            <Button variant="primary">Edit</Button>
+          </Card.Link>
+          <Card.Link href="#">
+            <Button variant="danger">Delete</Button>
+          </Card.Link>
         </Card.Body>
       </Card>
     </div>

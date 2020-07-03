@@ -24,7 +24,7 @@ const ItemsContainer = ({ match }) => {
       <Row xs={1} md={3}>
         {filteredItems.map((item, id) => (
           <Col>
-            <ItemComponent item={item} key={id} />
+            <ItemComponent item={item} key={id}/>
           </Col>
         ))}
       </Row>

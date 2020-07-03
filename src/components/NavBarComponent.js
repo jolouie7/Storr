@@ -3,11 +3,10 @@ import { useAuth0 } from "../react-auth0-spa";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBarComponent = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
-  // const history = useHistory();
 
   return (
     <div>

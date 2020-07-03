@@ -22,12 +22,11 @@ const CategoryContainer = ({history, match}) => {
         {state.map((category, id) => (
           <Col>
             <CategoryComponent
-              key={id}
-              id={id}
               name={category.name}
               picture={category.picture}
               history={history}
               match={match}
+              key={id}
             />
           </Col>
         ))}
