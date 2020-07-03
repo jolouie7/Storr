@@ -20,13 +20,6 @@ const NavBarComponent = () => {
           <Nav className="ml-auto">
             <Nav.Link>
               <div>
-                {/* Is signed in, allow the user to create a new item */}
-                {isAuthenticated && (
-                  <Link to="/items/create">
-                    <Button variant="dark">Create new Item</Button>
-                  </Link>
-                )}
-
                 <Link to="/items">
                   <Button variant="dark">Items</Button>
                 </Link>

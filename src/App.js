@@ -12,6 +12,7 @@ import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRouteComponent";
 import CategoryContainer from './containers/CategorysContainer';
 import ItemsContainer from './containers/ItemsContainer';
+import DisplayAllItems from './components/DisplayAllItems';
 
 const App = () => {
   const { loading } = useAuth0();
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/signIn" component={SignInComponent} />
           <Route path="/signUp" component={SignUpComponent} />
           <Route path="/categories/:id" component={ItemsContainer} />
+          <Route path="/items" component={DisplayAllItems} />
           <Route path="/categories" component={CategoryContainer} />
           <PrivateRoute path="/profile" component={ProfileComponent} />
           <Route path="/" component={LandingPageComponent} />
