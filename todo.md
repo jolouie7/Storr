@@ -1,11 +1,13 @@
 ### Frontend
+[x] add dynamic routes to see all items based on category
 [] employee profile page
 [] admin panel
 [] indiviual item page
 [x] categories page
 [] add more buttons to Navbar
 - [] add a create item button
-- [] add a button to get to categories
+- [] add a button to view all categories
+- [] add a button to view all items
 - [] add a button to go to add items
 
 [x] implement Auth0
@@ -48,3 +50,4 @@
 - react-bootstrap
 - auth0
 - style-components?
+- react hook form
