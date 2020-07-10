@@ -2,7 +2,7 @@
 [x] add dynamic routes to see all items based on category
 [] employee profile page
 [] admin panel
-[] indiviual item page
+[] item edit page
 [x] categories page
 [x] items page
 - [] add a create item button (has to be signed in)
